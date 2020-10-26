@@ -350,6 +350,7 @@ key-value、documentなどタイプ別にサービスが分かれています。
 [AWS](https://aws.amazon.com/jp/products/databases/)  
 [Azure](https://azure.microsoft.com/ja-jp/product-categories/databases/)  
 [GCP](https://cloud.google.com/products/databases?hl=ja)
+[DB比較資料](https://cloud-textbook.com/50/)
 
 ---
 
@@ -357,3 +358,16 @@ key-value、documentなどタイプ別にサービスが分かれています。
 [AWS Database Migration Service](https://aws.amazon.com/jp/dms/)  
 [Azure Database Migration Service](https://azure.microsoft.com/ja-jp/services/database-migration/)  
 [GCP](https://cloud.google.com/solutions/database-migration?hl=ja#section-2)  
+
+---
+
+- サービス紹介の中でさらっと触れましたが、VMなどIaaSはVPC/Vnet上にデプロイされますが、PaaSやSaaSは必ずしもVPC/Vnetに構築されるわけではありません。  
+- 同じリージョンやゾーン内でも異なる場所（クラウドが管理する領域）にデプロイされるものがあります。
+- このようなサービスにはVPC/Vnetからはデフォルトでは接続することができません。
+
+---
+
+#### 接続方法は以下
+1. VPCエンドポイント/Vnetエンドポイント/限定公開のGoogleアクセスと呼ばれるプライベートアクセス用のエンドポイントを利用する。
+2. PaaS/SaaSが持つパブリックエンドポイントを利用してアクセスする。  
+→**1の方がインターネットを経由せず直接接続が可能で低レイテンシ＆セキュアなので、可能な限り選択しましょう**
