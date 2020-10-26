@@ -349,7 +349,7 @@ key-value、documentなどタイプ別にサービスが分かれています。
 この辺り見るとサービス毎の特性がさらっとわかります。
 [AWS](https://aws.amazon.com/jp/products/databases/)  
 [Azure](https://azure.microsoft.com/ja-jp/product-categories/databases/)  
-[GCP](https://cloud.google.com/products/databases?hl=ja)
+[GCP](https://cloud.google.com/products/databases?hl=ja)  
 [DB比較資料](https://cloud-textbook.com/50/)
 
 ---
